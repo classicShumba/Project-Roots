@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+:root {
+  --prime-color: #ffffff;
+  --primary-color: #0957fb;
+  --secondary-color: #C10020;
+  --background-color: #00143C;
+  --back-color: #000000;
+  font-family: "montserrat";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: fixed, url(/img/roots-hero.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body section {
+  height: auto;
+  width: 100vw;
+}
+
+nav {
+  color: var(--prime-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  padding-top: 1rem;
+  position: absolute;
+  width: 100vw;
+}
+nav .logo {
+  font-family: "chinese rocks";
+  font-size: 3rem;
+}
+nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+nav .menu .menu-items {
+  text-decoration: none;
+}
+nav .menu .menu-items a {
+  transition: all 0.3s ease-in-out 0.1s;
+}
+nav .menu .menu-items a:hover {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#home {
+  height: 100vh;
+}
+#home .home-inner {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(4, 88, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--prime-color);
+}
+#home .home-inner h1 {
+  font-size: 4.1rem;
+  font-weight: 900;
+  width: 50rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+#home .home-inner p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 40rem;
+}
+#home .home-inner .buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+#home .home-inner .buttons button {
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--prime-color);
+  font-size: 1.3rem;
+  border-radius: 2px;
+  width: 13rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+#home .home-inner .buttons button:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+#about {
+  display: flex;
+  background-color: #00143C;
+  color: var(--prime-color);
+}
+#about span {
+  color: var(--primary-color);
+}
+#about .about-left {
+  height: 100%;
+  width: 40%;
+  position: relative;
+}
+#about .about-left img {
+  position: relative;
+  width: 100%;
+}
+#about .about-left .root-txt {
+  position: absolute;
+  top: 7.5rem;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+#about .about-left .root-txt h2 {
+  font-family: "chinese rocks";
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 2.5rem;
+  line-height: 7rem;
+}
+#about .about-right {
+  width: 60%;
+  text-align: center;
+  padding-top: 3%;
+}
+#about .about-right h2 {
+  font-family: "chinese rocks";
+  font-size: 3rem;
+  letter-spacing: 0.6rem;
+}
+#about .about-right svg {
+  width: 28%;
+  margin-bottom: 2rem;
+}
+#about .about-right p {
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 0 15%;
+  margin: 5rem 0;
+  font-weight: 100;
+}
+#about .about-right button {
+  margin-top: 2rem;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--prime-color);
+  font-size: 1.3rem;
+  border-radius: 2px;
+  width: 13rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+#about .about-right button:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+#members {
+  margin-bottom: 5rem;
+  text-align: center;
+  color: var(--prime-color);
+}
+#members span {
+  color: var(--primary-color);
+}
+#members h2 {
+  font-family: "chinese rocks";
+  font-size: 6rem;
+  margin-top: 4rem;
+}
+#members h3 {
+  font-family: "chinese rocks";
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  margin-bottom: 6rem;
+}
+#members .members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#members .members .member {
+  width: 20rem;
+}
+#members .members .member h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+#members .members .member img {
+  width: 100%;
+  height: auto;
+}
+#members .members .member .member-img {
+  position: relative;
+  height: 100%;
+}
+#members .members .member .member-img .member-overlay {
+  background-color: rgba(4, 88, 255, 0.8);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  display: none;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+#members .members .member .member-img .member-overlay i {
+  font-size: 3.6rem;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+#members .members .member .member-img .member-overlay i:hover {
+  font-size: 5rem;
+  color: var(--secondary-color);
+}
+#members .members .member .member-img:hover .member-overlay {
+  display: flex;
+}
+
+#edm {
+  height: 100vh;
+  color: var(--prime-color);
+  font-family: "chinese rocks";
+  text-align: center;
+}
+#edm .edm {
+  height: 45%;
+  width: 100%;
+  background-color: var(--prime-color);
+  color: var(--back-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#edm .edm h2 {
+  font-size: 5rem;
+}
+#edm .edm svg {
+  width: 20%;
+}
+#edm .edm h3 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+}
+#edm .our-music {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#edm .our-music h2 {
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+}
+#edm .our-music svg {
+  width: 50%;
+}
+
+#roots-music {
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--prime-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#roots-music .music-left {
+  width: 50%;
+  padding: 0 4rem;
+}
+#roots-music .music-left span {
+  color: var(--primary-color);
+}
+#roots-music .music-left h2 {
+  font-family: "chinese rocks";
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+#roots-music .music-left svg {
+  margin-bottom: 2rem;
+  width: 39%;
+}
+#roots-music .music-left p {
+  text-align: start;
+  font-size: 1.2rem;
+  padding: 0 4%;
+  margin: 2rem 0;
+  font-weight: 100;
+  line-height: 1.5rem;
+}
+#roots-music .music-right {
+  width: 50%;
+  padding-right: 5rem;
+}
+#roots-music .music-right img {
+  width: 100%;
+}
+
+#records {
+  height: 100vh;
+  color: var(--prime-color);
+  background-color: rgba(0, 7, 19, 0.794);
+  display: flex;
+  text-align: center;
+}
+#records .vynl {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#records .vynl img {
+  width: 80%;
+  height: 80%;
+}
+#records .vynl-links {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+#records .vynl-links h2 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+}
+#records .vynl-links .icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#records .vynl-links .icons .stream {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+#records .vynl-links .icons .stream svg {
+  width: 3rem;
+  margin: 0 auto;
+}
+#records .vynl-links .icons .stream p {
+  font-weight: 500;
+}
+
+#shows {
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--prime-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#shows .upcoming {
+  width: 50%;
+  font-family: "chinese rocks";
+}
+#shows .upcoming h2 {
+  font-size: 3.5rem;
+  letter-spacing: 0.8rem;
+  margin-bottom: 1rem;
+}
+#shows .schedule {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+#shows .schedule .list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#shows .schedule .list .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+}
+#shows .schedule .list .date h3 {
+  font-size: 3rem;
+}
+#shows .schedule .list .date p {
+  font-weight: 500;
+  padding-left: 0.5rem;
+  text-align: start;
+}
+#shows .schedule .list .date p span {
+  color: rgba(255, 255, 255, 0.4588235294);
+}
+#shows .schedule .list .detail {
+  width: 24rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: start;
+}
+#shows .schedule .list .sch-btn {
+  width: 8rem;
+  height: 2.5rem;
+  color: var(--prime-color);
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid var(--prime-color);
+  border-radius: 3rem;
+  cursor: pointer;
+}
+#shows .schedule .list .sch-btn:hover {
+  background-color: var(--prime-color);
+  color: var(--secondary-color);
+}
+#shows .schedule button {
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--prime-color);
+  font-size: 1.3rem;
+  border-radius: 2px;
+  width: 13rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+#shows .schedule button:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+#merch {
+  height: auto;
+  color: var(--prime-color);
+  text-align: center;
+  background-color: rgba(0, 7, 19, 0.794);
+}
+#merch h2 {
+  font-family: "chinese rocks";
+  font-size: 6rem;
+}
+#merch h3 {
+  font-family: "chinese rocks";
+  font-size: 4rem;
+  letter-spacing: 1.5rem;
+}
+#merch h3 span {
+  color: var(--primary-color);
+}
+#merch .products {
+  margin: 5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10rem;
+}
+#merch .products .prod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+#merch .products .prod .prod-img {
+  width: 16rem;
+  height: 16rem;
+  background-color: grey;
+}
+#merch .products .prod .prod-detail {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+#merch .products .prod .prod-detail h4 {
+  font-size: 1.3rem;
+}
+#merch .products .prod .prod-detail p span {
+  color: greenyellow;
+}
+#merch .products .prod .prod-detail p .out {
+  color: red;
+}
+#merch .products .prod .prod-detail .shop-btn {
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--prime-color);
+  font-size: 1.3rem;
+  border-radius: 2px;
+  width: 13rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  width: 10rem;
+  height: 3rem;
+}
+#merch .products .prod .prod-detail .shop-btn:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+#merch .merch-inner {
+  padding: 3rem 0;
+}
+
+#contact {
+  background-color: var(--prime-color);
+  color: var(--back-color);
+  text-align: center;
+}
+#contact h2 {
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
+  font-family: "chinese rocks";
+  padding-top: 3rem;
+}
+#contact h2 span {
+  color: var(--primary-color);
+}
+#contact .cont-detail {
+  width: 100%;
+  padding: 5rem 0 5rem 4rem;
+  display: flex;
+}
+#contact .cont-detail h3 {
+  text-align: start;
+  font-size: 2rem;
+}
+#contact .contact-tbl {
+  width: 57%;
+  border-right: lightgrey 1px solid;
+}
+#contact .contact-tbl h3 {
+  padding-left: 2rem;
+}
+#contact .sub {
+  height: 100%;
+  width: 40%;
+  margin: auto 0;
+  text-align: initial;
+  padding: 0 5rem;
+}
+#contact .sub h3 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+#contact .sub p {
+  margin-bottom: 2rem;
+  width: 80%;
+  line-height: 1.2rem;
+}
+#contact .sub .mail-sub {
+  border: 2px solid lightgrey;
+  height: 3.5rem;
+  width: 24rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+}
+#contact .sub .mail-sub button {
+  height: 100%;
+  width: 3.5rem;
+  background-color: var(--primary-color);
+}
+#contact .sub .mail-sub button svg {
+  width: 1.5rem;
+  fill: #ffffff;
+}
+#contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+#contact form input {
+  height: 3.5rem;
+  width: 20rem;
+  border: 2px solid rgba(128, 128, 128, 0.381);
+  padding: 1rem;
+}
+#contact form .msg {
+  height: 8rem;
+  grid-row: span 2;
+}
+#contact form button {
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--prime-color);
+  font-size: 1.3rem;
+  border-radius: 2px;
+  width: 13rem;
+  height: 4rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  width: 10rem;
+  height: 3rem;
+}
+#contact form button:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+#contact .contact-inner {
+  padding: 0 3rem;
+}
+
+footer {
+  color: var(--prime-color);
+  background-color: #00143C;
+  padding: 2rem 2rem 0 2rem;
+}
+footer .footer-icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+footer .footer-icons .icon-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .footer-icons span, footer .footer-icons i {
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+footer .footer-icons span:hover, footer .footer-icons i:hover {
+  color: var(--primary-color);
+}
+footer .copy {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}/*# sourceMappingURL=style.css.map */

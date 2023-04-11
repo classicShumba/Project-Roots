@@ -1,0 +1,657 @@
+@import 'config';
+@import 'media-query';
+
+html{
+    scroll-behavior: smooth;
+    // scroll-padding: rem;
+}
+body{
+    background: fixed, url(/img/roots-hero.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    section{
+        height: auto;
+        width: 100vw;
+    }
+
+}
+
+nav{
+    color: var(--prime-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 100vw;
+
+    .logo{
+        font-family: 'chinese rocks';
+        font-size: 3rem;
+    }
+
+    .menu{
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        .menu-items{
+            text-decoration: none;            
+            a{
+                transition: all .3s ease-in-out .1s;
+                &:hover{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+                // &::after{
+                //     content: '';
+                //     background-color: #ffffff;
+                //     width: 1rem;
+                //     height: .1rem;
+                //     position: absolute;
+                //     bottom: 5px;
+                //     rotate: 45deg;
+                // }
+                // &::before{
+                //     content: '';
+                //     background-color: #ffffff;
+                //     width: 1rem;
+                //     height: .1rem;
+                //     position: absolute;
+                //     bottom: 5px;
+                //     rotate: -45deg;
+                // }
+            }
+        }
+    }
+}
+
+#home{
+    height: 100vh;
+
+    .home-inner{
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(4, 88, 255, 0.1);
+        @include flex-center;
+        flex-direction: column;
+        color: var(--prime-color);
+        
+        h1{
+            font-size: 4.1rem;
+            font-weight: 900;
+            width: 50rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 600;
+            width: 40rem;
+        }
+        .buttons{
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+            button{
+                @include button-style;
+            }
+        }
+    }
+}
+
+#about{
+    display: flex;
+    background-color: #00143C;
+    color: var(--prime-color);
+    
+    span{
+        color: var(--primary-color);
+    }
+
+    .about-left{
+        height: 100%;
+        width: 40%;
+        position: relative;
+        img{
+            position: relative;
+            width: 100%;
+        }
+        .root-txt{
+            position: absolute;
+            top: 7.5rem;
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            
+            h2{
+                font-family: 'chinese rocks';
+                font-size: 6rem;
+                font-weight: 900;
+                letter-spacing: 2.5rem;
+                line-height: 7rem;
+            }
+        }
+    }
+    .about-right{
+        width: 60%;
+        text-align: center;
+        padding-top: 3%;
+
+        h2{
+            font-family: 'chinese rocks';
+            font-size: 3rem;
+            letter-spacing: 0.6rem;
+        }
+        svg{
+            width: 28%;
+            margin-bottom: 2rem;
+        }
+        p{
+            text-align: start;
+            font-size: 1.3rem;
+            padding: 0 15%;
+            margin: 5rem 0;
+            font-weight: 100;
+        }
+        button{
+            margin-top: 2rem;
+            @include button-style;
+        }
+    }
+}
+
+#members{
+    margin-bottom: 5rem;
+    text-align: center;
+    color: var(--prime-color);
+    span{
+        color: var(--primary-color);
+    }
+    h2{
+        font-family: 'chinese rocks';
+        font-size: 6rem;
+        margin-top: 4rem;
+    }
+    h3{
+        font-family: 'chinese rocks';
+        font-size: 5rem;
+        letter-spacing: 1rem;
+        margin-bottom: 6rem;
+    }
+
+    .members{
+        @include flex-center;
+        justify-content: space-evenly;
+
+        .member{
+            width: 20rem;
+            h4{
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+           .member-img{
+            position: relative;
+            height: 100%;
+
+                .member-overlay{
+                    background-color: rgba(4, 88, 255, 0.8);
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    @include flex-center;
+                    justify-content: space-evenly;
+                    display: none;
+                    i{
+                        font-size: 3.6rem;
+                        transition: all 0.3s ease-in-out .1s;
+
+                        &:hover{
+                            font-size: 5rem;
+                            color: var(--secondary-color);
+                        }
+                    }
+                    transition: all 0.3s ease-in-out .1s;
+                }
+
+                &:hover{
+                    .member-overlay{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#edm{
+    height: 100vh;
+    color: var(--prime-color);
+    font-family: 'chinese rocks';
+    text-align: center;
+
+    .edm{
+        height: 45%;
+        width: 100%;
+        background-color: var(--prime-color);
+        color: var(--back-color);
+        @include flex-center;
+        flex-direction: column;
+
+        h2{
+            font-size: 5rem;
+        }
+        svg{
+            width: 20%;
+        }
+        h3{
+            font-size: 4rem;
+            letter-spacing: .5rem;
+        }
+    }
+
+    .our-music{
+        height: 55%;
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+
+        h2{
+            font-size: 10rem;
+            letter-spacing: .5rem;
+        }
+        svg{
+            width: 50%;
+        }
+    }
+}
+
+#roots-music{
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--prime-color);
+    text-align: center;
+    @include flex-center;
+
+    .music-left{
+        width: 50%;
+        padding: 0 4rem;
+
+        span{
+            color: var(--primary-color);
+        }
+        h2{
+            font-family: 'chinese rocks';
+            font-size: 3rem;
+            letter-spacing: .5rem;
+        }
+        svg{
+            margin-bottom: 2rem;
+            width: 39%;
+        }
+        p{
+            text-align: start;
+            font-size: 1.2rem;
+            padding: 0 4%;
+            margin: 2rem 0;
+            font-weight: 100;
+            line-height: 1.5rem;
+        }
+
+    }
+    .music-right{
+        width: 50%;
+        padding-right: 5rem;
+    
+        img{
+            width: 100%;
+        }
+
+    }
+}
+
+#records{
+    height: 100vh;
+    color: var(--prime-color);
+    background-color: rgba(0, 7, 19, 0.794);
+    display: flex;
+    text-align: center;
+
+    .vynl{
+        width: 50%;
+        height: 100%;
+        @include flex-center;
+
+        img{
+            width: 80%;
+            height: 80%;
+        }
+    }
+    .vynl-links{
+        width: 50%;
+        height: 100%;
+        @include flex-center;
+        flex-direction: column;
+        padding: 0 3rem;
+
+        h2{
+            font-size: 2.5rem;
+            line-height: 4rem;
+            margin-bottom: 2rem;
+        }
+        
+
+        .icons{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            .stream{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 1rem;
+
+                svg{
+                    width: 3rem;
+                    margin: 0 auto;
+                }
+                p{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+#shows{
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--prime-color);
+    @include flex-center;
+    text-align: center;
+
+    .upcoming{
+        width: 50%;
+        font-family: 'chinese rocks';
+
+        h2{
+            font-size: 3.5rem;
+            letter-spacing: .8rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .schedule{
+        width: 50%;
+        @include flex-center;
+        flex-direction: column;
+        gap: 3rem;
+        
+        .list{
+            width: 100%;
+            @include flex-center;
+            justify-content: space-evenly;
+            // gap: 2rem;
+
+            .date{
+                @include flex-center;
+                width: 7rem;
+
+                h3{
+                    font-size: 3rem;
+                }
+                p{
+                    font-weight: 500;
+                    padding-left: .5rem;
+                    text-align: start;
+                    span{
+                        color: #ffffff75;
+                    }
+                }
+            }
+
+            .detail{
+                width: 24rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-align: start;
+            }
+
+            .sch-btn{
+                width: 8rem;
+                height: 2.5rem;
+                color: var(--prime-color);
+                font-size: .9rem;
+                background-color: #00000000;
+                border: 3px solid var(--prime-color);
+                border-radius: 3rem;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--prime-color);
+                    color: var(--secondary-color);
+                }
+            }
+        }
+
+        button{
+            @include button-style;
+        }
+    }
+}
+
+#merch{
+    height: auto;
+    color: var(--prime-color);
+    text-align: center;
+    background-color: rgba(0, 7, 19, 0.794);
+
+    h2{
+        font-family: 'chinese rocks';
+        font-size: 6rem;
+    }
+
+    h3{
+        font-family: 'chinese rocks';
+        font-size: 4rem;
+        letter-spacing: 1.5rem;
+        span{
+            color: var(--primary-color);
+        }
+    }
+
+    .products{
+        margin: 5rem 0;
+        width: 100%;
+        @include flex-center;
+        flex-wrap: wrap;
+        row-gap: 10rem;
+
+        .prod{
+            @include flex-center;
+            gap: 2rem;
+            width: 50%;
+
+            .prod-img{
+                width: 16rem;
+                height: 16rem;
+                background-color: grey;
+            }
+            .prod-detail{
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+                h4{
+                    font-size: 1.3rem;
+                }
+                p{
+                    span{
+                        color: greenyellow;
+                    }
+                    .out{
+                        color: red;
+                    }
+                }
+                .shop-btn{
+                    @include button-style;
+                    font-size: 1.1rem;
+                    width: 10rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+    .merch-inner{
+        padding: 3rem 0;
+    }
+}
+
+#contact{
+    
+    background-color: var(--prime-color);
+    color: var(--back-color);
+    text-align: center;
+
+    h2{
+        font-size: 3.5rem;
+        letter-spacing: .5rem;
+        font-family: 'chinese rocks';
+        padding-top: 3rem;
+        span{
+            color: var(--primary-color);
+        }
+    }
+
+    .cont-detail{
+        width: 100%;
+        padding: 5rem 0 5rem 4rem;
+        display: flex;
+
+        h3{
+            text-align: start;
+            font-size: 2rem;
+        }
+    }
+    .contact-tbl{
+        width: 57%;
+        border-right: lightgrey 1px solid;
+        h3{
+            padding-left: 2rem;
+        }
+    }
+    .sub{
+        height: 100%;
+        width: 40%;
+        margin: auto 0;
+        text-align: initial;
+        padding: 0 5rem;
+        
+
+        h3{
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        p{
+            margin-bottom: 2rem;
+            width: 80%;
+            line-height: 1.2rem;
+        }
+        .mail-sub{
+            border: 2px solid lightgrey;
+            height: 3.5rem;
+            width: 24rem;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 2rem;
+
+            button{
+                height: 100%;
+                width: 3.5rem;
+                background-color: var(--primary-color);
+                svg{
+                    width: 1.5rem;
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+        
+        input{
+            height: 3.5rem;
+            width: 20rem;
+            border: 2px solid rgba(128, 128, 128, 0.381);
+            padding: 1rem;
+        }
+        .msg{
+            height: 8rem;
+            grid-row: span 2;
+        }
+        button{
+            @include button-style;
+            font-size: 1.1rem;
+            width: 10rem;
+            height: 3rem;
+        }
+    }
+
+    .contact-inner{
+
+        padding: 0 3rem;
+    }
+}
+
+footer{
+    color: var(--prime-color);
+    background-color: #00143C;
+    padding: 2rem 2rem 0 2rem;
+
+    .footer-icons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 2rem 0;
+        gap: 2rem;
+
+        .icon-group{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+        }
+
+        span,i{
+            font-size: 2rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all .3s ease-in-out .1s;
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+
+       
+    }
+    .copy{
+        text-align: center;
+        font-size: .8rem;
+        padding: 1rem 0;
+    }
+}
+
+

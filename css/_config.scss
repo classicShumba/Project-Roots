@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+    overflow-x: hidden;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  
+
+:root{
+    --prime-color: #ffffff;
+    --primary-color: #0957fb;
+    --secondary-color: #C10020;
+    --background-color: #00143C;
+    --back-color: #000000;
+
+    font-family: 'montserrat';
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button-style {
+    border: 3px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--prime-color);
+    font-size: 1.3rem;
+    border-radius: 2px;
+    width: 13rem;
+    height: 4rem;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: #fff;
+        color: var(--secondary-color);
+    }
+}
+
+
