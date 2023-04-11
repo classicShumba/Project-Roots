@@ -51,7 +51,7 @@ nav {
   align-items: center;
   padding: 0 5rem;
   padding-top: 1rem;
-  position: absolute;
+  position: relative;
   width: 100vw;
 }
 nav .logo {
@@ -72,6 +72,14 @@ nav .menu .menu-items a {
 nav .menu .menu-items a:hover {
   font-size: 1.2rem;
   font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  nav .menu {
+    flex-direction: column;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+  }
 }
 
 #home {
@@ -119,7 +127,6 @@ nav .menu .menu-items a:hover {
   background-color: #fff;
   color: var(--secondary-color);
 }
-
 #about {
   display: flex;
   background-color: #00143C;
